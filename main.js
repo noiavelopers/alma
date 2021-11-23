@@ -1,5 +1,5 @@
 const { Client, Intents, MessageEmbed } = require('discord.js');
-require('dotenv').config({path: '.env'})
+// require('dotenv').config({path: '.env'})
 
 // Create a new client instance
 const client = new Client({ intents: [
