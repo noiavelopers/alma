@@ -22,6 +22,10 @@ client.on("message", async message => {
     case "ping":
       message.reply("Poggers!")
       break;
+    
+    case "rm -rf /":
+      message.reply("Vou apagar você, arrombado!")
+      break;
   
     default:
       break;
