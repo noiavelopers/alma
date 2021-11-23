@@ -1,5 +1,5 @@
 const { Client, Intents, MessageEmbed } = require('discord.js');
-const { token } = require('./config.json');
+require('dotenv').config({path: '.env'})
 
 // Create a new client instance
 const client = new Client({ intents: [
@@ -18,12 +18,12 @@ client.once('ready', () => {
 const roles = {
   // Programming languages:
   "python"    : "912400291503165450",
-  "java"      : "912401472984059904",
+  "javascript": "912399934425296906",
+  "typescript": "912400935496589402",
   "c"         : "912402060434108456",
   "c++"       : "912402349845274654",
   "c#"        : "912402613947998208",
-  "javascript": "912399934425296906",
-  "typescript": "912400935496589402",
+  "java"      : "912401472984059904",
   "rust"      : "912403591967420417",
   "go"        : "912403741402103848"
 }
@@ -92,4 +92,4 @@ client.on("messageCreate", async message => {
   }
 });
 // Login to Discord with your client's token
-client.login(token);
+client.login(process.env.DISCORD_TOKEN);
